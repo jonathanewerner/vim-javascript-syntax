@@ -36,7 +36,9 @@ hi link shebang Comment
 
 " Statement Keywords {{{
 syntax keyword javaScriptSource         import export
-syntax keyword javaScriptIdentifier     arguments this let var void yield
+syntax keyword javaScriptIdentifier     arguments this let var void yield map filter
+syntax keyword javaScriptConsole        console info log
+syntax keyword javaScriptReact        props state setState ref refs key
 syntax keyword javaScriptOperator       delete new instanceof typeof
 syntax keyword javaScriptBoolean        true false
 syntax keyword javaScriptNull           null undefined
@@ -173,7 +175,7 @@ syntax region  javaScriptFuncExp         start=/\w\+\s\==\s\=function\>/ end="\(
 syntax match   javaScriptFuncArg         "\(([^()]*)\)" contains=javaScriptParens,javaScriptFuncComma contained
 syntax match   javaScriptFuncComma       /,/ contained
 syntax match   javaScriptFuncEq          /=/ contained
-syntax region  javaScriptFuncDef         start="\<function\>" end="\([^)]*\)" contains=javaScriptFuncKeyword,javaScriptFuncArg keepend
+" syntax region  javaScriptFuncDef         start="\<function\>" end="\([^)]*\)" contains=javaScriptFuncKeyword,javaScriptFuncArg keepend
 "}}}
 " Braces, Parens, symbols, colons {{{
 syntax match javaScriptBraces       "[{}\[\]]"
